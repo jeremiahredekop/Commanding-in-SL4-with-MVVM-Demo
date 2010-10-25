@@ -1,0 +1,34 @@
+﻿<navigation:Page x:Class="CommandingWithMvvm.Home" 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"
+    Title="Home"
+    Style="{StaticResource PageStyle}">
+
+    <Grid x:Name="LayoutRoot">
+        <StackPanel>
+            <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" 
+                                   Text="Introduction:"/>
+            <TextBlock x:Name="ContentText" Style="{StaticResource ContentTextStyle}" 
+                                   Text="This project demonstrates a simple Commanding Technique using Mvvm"/>
+            <ScrollViewer x:Name="PageScrollViewer" Margin="4" Style="{StaticResource PageScrollViewerStyle}">
+                <RichTextBox IsReadOnly="True" HorizontalContentAlignment="Left">
+                    <Paragraph>
+                        <Bold>Code-Behind: </Bold> No Mvvm or commanding
+                            <LineBreak/>
+                        <Bold>Binding1: </Bold> Simple ViewModel DataBound Properties and Command
+                        <LineBreak/>
+                    </Paragraph>
+                </RichTextBox>
+
+            </ScrollViewer>
+            <StackPanel>
+                <TextBlock Style="{StaticResource HeaderTextStyle}">Links:</TextBlock>
+                <HyperlinkButton NavigateUri="http://mvvmlight.codeplex.com/">Mvvm Light ToolKit</HyperlinkButton>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</navigation:Page>

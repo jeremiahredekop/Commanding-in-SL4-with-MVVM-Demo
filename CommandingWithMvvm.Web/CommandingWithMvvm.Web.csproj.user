@@ -22,6 +22,7 @@
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
           <ProjectOutputReferences>
             <Ref Project="{2559CB6C-1AF1-45B3-B3D6-61B0ECC0AABB}" Folder="ClientBin">CommandingWithMvvm.xap</Ref>
+            <Ref Project="{7B25A309-55C1-4991-85AB-316F45745020}" Folder="ClientBin">SilverlightTest1.xap</Ref>
           </ProjectOutputReferences>
         </WebProjectProperties>
       </FlavorProperties>

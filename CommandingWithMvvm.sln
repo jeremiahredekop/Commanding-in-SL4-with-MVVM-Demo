@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandingWithMvvm", "Comma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandingWithMvvm.Web", "CommandingWithMvvm.Web\CommandingWithMvvm.Web.csproj", "{3BDEE10C-CCD9-4740-A139-4CA9D4D3EF9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilverlightTest1", "SilverlightTest1\SilverlightTest1.csproj", "{7B25A309-55C1-4991-85AB-316F45745020}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{3BDEE10C-CCD9-4740-A139-4CA9D4D3EF9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDEE10C-CCD9-4740-A139-4CA9D4D3EF9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDEE10C-CCD9-4740-A139-4CA9D4D3EF9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B25A309-55C1-4991-85AB-316F45745020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B25A309-55C1-4991-85AB-316F45745020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B25A309-55C1-4991-85AB-316F45745020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B25A309-55C1-4991-85AB-316F45745020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

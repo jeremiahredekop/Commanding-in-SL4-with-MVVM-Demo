@@ -1,0 +1,5 @@
+C:\Users\Jeremiah Redekop\Documents\Visual Studio 2010\Projects\Demos\VanSLUG\Commanding-in-SL4-with-MVVM-Demo\CommandingWithMvvm.Web\bin\CommandingWithMvvm.Web.dll
+C:\Users\Jeremiah Redekop\Documents\Visual Studio 2010\Projects\Demos\VanSLUG\Commanding-in-SL4-with-MVVM-Demo\CommandingWithMvvm.Web\bin\CommandingWithMvvm.Web.pdb
+C:\Users\Jeremiah Redekop\Documents\Visual Studio 2010\Projects\Demos\VanSLUG\Commanding-in-SL4-with-MVVM-Demo\CommandingWithMvvm.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jeremiah Redekop\Documents\Visual Studio 2010\Projects\Demos\VanSLUG\Commanding-in-SL4-with-MVVM-Demo\CommandingWithMvvm.Web\obj\Debug\CommandingWithMvvm.Web.dll
+C:\Users\Jeremiah Redekop\Documents\Visual Studio 2010\Projects\Demos\VanSLUG\Commanding-in-SL4-with-MVVM-Demo\CommandingWithMvvm.Web\obj\Debug\CommandingWithMvvm.Web.pdb
