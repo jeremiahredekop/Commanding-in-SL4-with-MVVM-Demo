@@ -28,8 +28,6 @@ namespace SilverlightTest1
             // check that incrementing happened
             initialValue++;
             Assert.AreEqual(initialValue, vm.Count);
-
-
         }
     }
 }

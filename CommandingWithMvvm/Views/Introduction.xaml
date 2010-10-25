@@ -24,10 +24,7 @@
                 </RichTextBox>
 
             </ScrollViewer>
-            <StackPanel>
-                <TextBlock Style="{StaticResource HeaderTextStyle}">Links:</TextBlock>
-                <HyperlinkButton NavigateUri="http://mvvmlight.codeplex.com/">Mvvm Light ToolKit</HyperlinkButton>
-            </StackPanel>
+
         </StackPanel>
     </Grid>
 

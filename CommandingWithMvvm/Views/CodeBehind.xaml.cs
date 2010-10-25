@@ -49,7 +49,7 @@ namespace CommandingWithMvvm
         {
             //Update private variable
             count++;
-            //Refresh Text Box
+            //Refresh Text Box from private value
             SetTextBoxValue();
         }
 

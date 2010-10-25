@@ -15,10 +15,10 @@ namespace CommandingWithMvvm.ViewModels
 
             if (IsInDesignMode)
                 Count = 3;
-            
-            
         }
 
+        #region Logic
+        
         private void InitializeCommands()
         {
             // Action that command will perform
@@ -30,10 +30,16 @@ namespace CommandingWithMvvm.ViewModels
             IncrementCount = new RelayCommand(incrementAction,incrementPredicate);
         }
 
+        #endregion
+
+        #region Public Members
+        
+
         public void PerformIncrementCount()
         {
             Count++;
         }
+
 
         #region Count Property (INotify Property Changed)
         
@@ -77,6 +83,8 @@ namespace CommandingWithMvvm.ViewModels
         #endregion
 
         public RelayCommand IncrementCount { get; set; }
+
+        #endregion
 
     }
 }

@@ -98,9 +98,6 @@
     <Compile Include="Views\ErrorWindow.xaml.cs">
       <DependentUpon>ErrorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\About.xaml.cs">
-      <DependentUpon>About.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\Introduction.xaml.cs">
       <DependentUpon>Introduction.xaml</DependentUpon>
     </Compile>
@@ -127,10 +124,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\ErrorWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\About.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
