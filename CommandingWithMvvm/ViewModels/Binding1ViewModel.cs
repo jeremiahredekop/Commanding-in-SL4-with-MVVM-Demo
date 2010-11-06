@@ -56,6 +56,9 @@ namespace CommandingWithMvvm.ViewModels
         /// Changes to that property's value raise the PropertyChanged event. 
         /// This property's value is broadcasted by the Messenger's default instance when it changes.
         /// </summary>
+        
+        #endregion
+        
         public int Count
         {
             get
@@ -80,8 +83,10 @@ namespace CommandingWithMvvm.ViewModels
 
             }
         }
-        #endregion
-
+        
+        /// <summary>
+        /// Command that will increment the count property
+        /// </summary>
         public RelayCommand IncrementCount { get; set; }
 
         #endregion

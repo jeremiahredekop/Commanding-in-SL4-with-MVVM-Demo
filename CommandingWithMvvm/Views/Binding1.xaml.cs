@@ -19,19 +19,6 @@ namespace CommandingWithMvvm
         {
             InitializeComponent();
         }
-
-        // Executes when the user navigates to this page.
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-        }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-            var myViewModel = (this.DataContext as ViewModels.Binding1ViewModel);
-
-            if (myViewModel != null)
-                myViewModel.PerformIncrementCount();
-        }
         
     }
 

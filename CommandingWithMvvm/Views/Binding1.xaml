@@ -3,6 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    xmlns:si="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
     mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480"
     Title="About" 
     DataContext="{Binding Binding1ViewModel, Source={StaticResource VMLocator}}"
@@ -29,12 +31,20 @@
                         <ColumnDefinition Width="214*" />
                         <ColumnDefinition Width="165*" />
                     </Grid.ColumnDefinitions>
-                    <TextBox  Name="textBox1" Grid.Column="1" Text="{Binding Path=Count, Mode=TwoWay}" Grid.Row="2" VerticalAlignment="Center" />
+                    <TextBox  Name="textBox1" Grid.Column="1" Text="{Binding Path=Count, Mode=TwoWay}" Grid.Row="2" Margin="5" />
                     
                     <sdk:Label Height="28" Margin="6,22,180,0" Name="label1" VerticalAlignment="Top" Grid.ColumnSpan="2" Content="Increment Count" Grid.RowSpan="2" />
                     <sdk:Label Grid.Row="2" Height="28" HorizontalAlignment="Left" Name="label2" VerticalAlignment="Top" Width="120" Content="Current Count:" Margin="6,8,0,0" Grid.RowSpan="2" />
-                    <Button Content="Bound to ViewModel Command"  Grid.Column="1" Command="{Binding Path=IncrementCount}" HorizontalAlignment="Stretch" VerticalAlignment="Center" />
-                    <Button Content="Code Behind" Grid.Column="1" Name="button2"  Click="button2_Click" Grid.Row="1" VerticalAlignment="Center" />
+                    <Button Content="Bound to ViewModel Command" Command="{Binding Path=IncrementCount}" Grid.Column="1" Margin="5" />
+                    
+                    
+                    <Button Content="Behavior" Grid.Column="1" Grid.Row="1" Margin="5">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Click">
+                                <si:CallMethodAction MethodName="PerformIncrementCount" TargetObject="{Binding}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </Button>
                 </Grid>
             </StackPanel>
 

@@ -28,7 +28,7 @@
                         <ColumnDefinition Width="165*" />
                     </Grid.ColumnDefinitions>
                     <TextBox Name="textBox1" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" />
-                    <Button Content="Increment Count Button in C#" Name="button1" Grid.Column="1" Click="button1_Click" VerticalAlignment="Center" />
+                    <Button Content="Increment Count in C#" Name="button1" Grid.Column="1" Click="button1_Click" VerticalAlignment="Center" />
                     <sdk:Label Grid.RowSpan="2" Height="28" Margin="1,9,185,0" Name="label1" VerticalAlignment="Top" Grid.ColumnSpan="2" Content="Increment Count" />
                     <sdk:Label Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="0,13,0,0" Name="label2" VerticalAlignment="Top" Width="120" Grid.RowSpan="2" Content="Current Count:" />
                 </Grid>

@@ -2,16 +2,13 @@
   x:Class="CommandingWithMvvm.App"
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:vm="clr-namespace:CommandingWithMvvm.ViewModels"
-    >
-
-  <Application.Resources>
+    xmlns:vm="clr-namespace:CommandingWithMvvm.ViewModels">
+    <Application.Resources>
         <ResourceDictionary>
             <vm:ViewModelLocator x:Key="VMLocator"/>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="Assets/Styles.xaml"/>
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Application.Resources>
-
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/Styles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
