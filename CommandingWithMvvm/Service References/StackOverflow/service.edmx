@@ -1,0 +1,115 @@
+﻿<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+    <Schema Namespace="StackOverflow" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2007/05/edm">
+      <EntityType Name="Badge">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Date" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="Comment">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Score" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Text" Type="Edm.String" Nullable="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="Post">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="AcceptedAnswerId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="AnswerCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Body" Type="Edm.String" Nullable="true" />
+        <Property Name="ClosedDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="CommentCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CommunityOwnedDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="FavoriteCount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="LastActivityDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="LastEditDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="LastEditorUserId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="OwnerUserId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="ParentId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="PostTypeId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Score" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Tags" Type="Edm.String" Nullable="true" />
+        <Property Name="Title" Type="Edm.String" Nullable="true" />
+        <Property Name="ViewCount" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="User">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="AboutMe" Type="Edm.String" Nullable="true" />
+        <Property Name="Age" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="DisplayName" Type="Edm.String" Nullable="true" />
+        <Property Name="DownVotes" Type="Edm.Int32" Nullable="true" />
+        <Property Name="EmailHash" Type="Edm.String" Nullable="true" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="LastAccessDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Location" Type="Edm.String" Nullable="true" />
+        <Property Name="Reputation" Type="Edm.Int32" Nullable="true" />
+        <Property Name="UpVotes" Type="Edm.Int32" Nullable="true" />
+        <Property Name="Views" Type="Edm.Int32" Nullable="true" />
+        <Property Name="WebsiteUrl" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="Vote">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="BountyAmount" Type="Edm.Int32" Nullable="true" />
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+        <Property Name="VoteTypeId" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="Tag">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="TagName" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityType Name="PostHistory">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="CreationDate" Type="Edm.DateTime" Nullable="true" />
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostHistoryTypeId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="PostId" Type="Edm.Int32" Nullable="false" />
+        <Property Name="RevisionGUID" Type="Edm.String" Nullable="true" />
+        <Property Name="Text" Type="Edm.String" Nullable="true" />
+        <Property Name="UserId" Type="Edm.Int32" Nullable="true" />
+      </EntityType>
+      <EntityType Name="VoteType">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int32" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="true" />
+      </EntityType>
+      <EntityContainer Name="StackOverflow" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="Badges" EntityType="StackOverflow.Badge" />
+        <EntitySet Name="Comments" EntityType="StackOverflow.Comment" />
+        <EntitySet Name="Posts" EntityType="StackOverflow.Post" />
+        <EntitySet Name="Users" EntityType="StackOverflow.User" />
+        <EntitySet Name="Votes" EntityType="StackOverflow.Vote" />
+        <EntitySet Name="Tags" EntityType="StackOverflow.Tag" />
+        <EntitySet Name="PostHistories" EntityType="StackOverflow.PostHistory" />
+        <EntitySet Name="VoteTypes" EntityType="StackOverflow.VoteType" />
+      </EntityContainer>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

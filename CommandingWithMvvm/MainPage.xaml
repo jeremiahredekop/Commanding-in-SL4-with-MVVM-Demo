@@ -49,9 +49,16 @@
 
 
                     <HyperlinkButton x:Name="Link3" Style="{StaticResource LinkStyle}" 
-                                     NavigateUri="/Binding1" TargetName="ContentFrame" Content="Binding 1"/>
+                                     NavigateUri="/Binding1" TargetName="ContentFrame" Content="Binding"/>
 
                     <Rectangle x:Name="Divider3" Style="{StaticResource DividerStyle}"/>
+
+
+                    <HyperlinkButton x:Name="Link4" Style="{StaticResource LinkStyle}" 
+                                     NavigateUri="/OData" TargetName="ContentFrame" Content="OData"/>
+
+
+                    
 
 
                    

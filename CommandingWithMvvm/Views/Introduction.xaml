@@ -20,6 +20,7 @@
                             <LineBreak/>
                         <Bold>Binding1: </Bold> Simple ViewModel DataBound Properties and Command
                         <LineBreak/>
+                        <Bold>Odata:</Bold> Querying StackOverflow using a ViewModel, Command, and Command Parameter
                     </Paragraph>
                 </RichTextBox>
 

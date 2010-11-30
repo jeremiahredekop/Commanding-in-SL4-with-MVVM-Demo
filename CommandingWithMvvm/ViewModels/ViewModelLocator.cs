@@ -92,7 +92,63 @@ namespace CommandingWithMvvm.ViewModels
         public static void Cleanup()
         {
             ClearBinding1ViewModel();
+            ClearODataViewModel();
         }
+
+        private static ODataViewModel _oDataViewModel;
+
+        /// <summary>
+        /// Gets the ODataViewModel property.
+        /// </summary>
+        public static ODataViewModel ODataViewModelStatic
+        {
+            get
+            {
+                if (_oDataViewModel == null)
+                {
+                    CreateODataViewModel();
+                }
+
+                return _oDataViewModel;
+            }
+        }
+
+        /// <summary>
+        /// Gets the ODataViewModel property.
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1822:MarkMembersAsStatic",
+            Justification = "This non-static member is needed for data binding purposes.")]
+        public ODataViewModel ODataViewModel
+        {
+            get
+            {
+                return ODataViewModelStatic;
+            }
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to delete the ODataViewModel property.
+        /// </summary>
+        public static void ClearODataViewModel()
+        {
+            _oDataViewModel.Cleanup();
+            _oDataViewModel = null;
+        }
+
+        /// <summary>
+        /// Provides a deterministic way to create the ODataViewModel property.
+        /// </summary>
+        public static void CreateODataViewModel()
+        {
+            if (_oDataViewModel == null)
+            {
+                _oDataViewModel = new ODataViewModel();
+            }
+        }
+
+
+
 
     }
 }

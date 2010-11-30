@@ -1,7 +1,7 @@
-﻿using GalaSoft.MvvmLight;
+﻿using System;
 using System.Windows.Input;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
-using System;
 
 namespace CommandingWithMvvm.ViewModels
 {
@@ -18,7 +18,7 @@ namespace CommandingWithMvvm.ViewModels
         }
 
         #region Logic
-        
+
         private void InitializeCommands()
         {
             // Action that command will perform
@@ -27,13 +27,13 @@ namespace CommandingWithMvvm.ViewModels
             Func<bool> incrementPredicate = () => Count >= 0;
 
             // Set Command property to new RelayCommand Object
-            IncrementCount = new RelayCommand(incrementAction,incrementPredicate);
+            IncrementCount = new RelayCommand(incrementAction, incrementPredicate);
         }
 
         #endregion
 
         #region Public Members
-        
+
 
         public void PerformIncrementCount()
         {
@@ -42,7 +42,7 @@ namespace CommandingWithMvvm.ViewModels
 
 
         #region Count Property (INotify Property Changed)
-        
+
         /// <summary>
         /// The <see cref="Count" /> property's name.
         /// </summary>
@@ -56,9 +56,9 @@ namespace CommandingWithMvvm.ViewModels
         /// Changes to that property's value raise the PropertyChanged event. 
         /// This property's value is broadcasted by the Messenger's default instance when it changes.
         /// </summary>
-        
+
         #endregion
-        
+
         public int Count
         {
             get
@@ -83,11 +83,11 @@ namespace CommandingWithMvvm.ViewModels
 
             }
         }
-        
+
         /// <summary>
         /// Command that will increment the count property
         /// </summary>
-        public RelayCommand IncrementCount { get; set; }
+        public ICommand IncrementCount { get; set; }
 
         #endregion
 
