@@ -87,7 +87,7 @@ namespace CommandingWithMvvm.ViewModels
         /// <summary>
         /// Command that will increment the count property
         /// </summary>
-        public ICommand IncrementCount { get; set; }
+        public RelayCommand IncrementCount { get; set; }
 
         #endregion
 
